@@ -1,0 +1,45 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`createTransaction(): correct data set amount via toAmount 1`] = `
+Object {
+  "fromAmount": "10",
+  "fromWallet": 6,
+  "id": 3,
+  "toAmount": "13",
+  "toWallet": 7,
+  "ts": 1558281600000,
+}
+`;
+
+exports[`createTransaction(): correct data should work as expected (1:0.123) 1`] = `
+Object {
+  "fromAmount": "10",
+  "fromWallet": 2,
+  "id": 1,
+  "toAmount": "1.2",
+  "toWallet": 3,
+  "ts": 1558281600000,
+}
+`;
+
+exports[`createTransaction(): correct data should work as expected (1:1) 1`] = `
+Object {
+  "fromAmount": "10",
+  "fromWallet": 0,
+  "id": 0,
+  "toAmount": "10",
+  "toWallet": 1,
+  "ts": 1558281600000,
+}
+`;
+
+exports[`createTransaction(): correct data should work as expected (1:99) 1`] = `
+Object {
+  "fromAmount": "10",
+  "fromWallet": 4,
+  "id": 2,
+  "toAmount": "9.9e+2",
+  "toWallet": 5,
+  "ts": 1558281600000,
+}
+`;
