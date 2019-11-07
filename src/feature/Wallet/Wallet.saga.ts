@@ -19,8 +19,7 @@ function* trackFXRate() {
                 const { rates } = yield call(getFXRateForPair, activeWallet.currency);
                 yield put(setActiveRates(rates));
             }
-            // TODO change to 10sec
-            const { cancel } = yield race({ cancel: take(setActiveWallet.toString()), timeout: delay(100000000) });
+            const { cancel } = yield race({ cancel: take(setActiveWallet.toString()), timeout: delay(10000) });
             if (cancel) isRunning = false;
         }
     } catch (e) {
